@@ -1,6 +1,6 @@
-import { Entity, Column, PrimaryGeneratedColumn, OneToMany} from 'typeorm'
-import { IsEmail } from 'class-validator'
-import { Order } from './order.entity'
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany} from 'typeorm';
+import { IsEmail } from 'class-validator';
+import { Order } from './order.entity';
 
 @Entity()
 export class Client {
