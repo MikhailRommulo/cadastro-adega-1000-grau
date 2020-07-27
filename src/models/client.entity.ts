@@ -1,4 +1,5 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany} from 'typeorm'
+import { IsEmail } from 'class-validator'
 import { Order } from './order.entity'
 
 @Entity()
@@ -12,7 +13,8 @@ export class Client {
     @Column({length: 13})
     phoneContact: string
     
-    @Column({nullable: true})
+    @Column({length: 65, nullable: true})
+    @IsEmail()
     email: string
 
     @OneToMany(() => Order, order => order.client)

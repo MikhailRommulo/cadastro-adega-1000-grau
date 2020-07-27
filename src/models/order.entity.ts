@@ -12,6 +12,6 @@ export class Order {
     @Column({type: 'float4'})
     value: number
 
-    @CreateDateColumn({type: 'timestamp'})
+    @CreateDateColumn({type: 'timestamp with time zone'})
     dateOfOrder: Date
 }

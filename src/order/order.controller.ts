@@ -13,6 +13,13 @@ import { Crud } from '@nestjsx/crud';
             type: 'number',
             primary: true
         }
+    },
+    query: {
+        join: {
+            client: {
+                eager: true
+            }
+        }
     }
 })
 @Controller('orders')
