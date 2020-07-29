@@ -6,7 +6,7 @@ export class Order {
     @PrimaryGeneratedColumn()
     id: number
 
-    @ManyToOne(() => Client, client => client.orders)
+    @ManyToOne(() => Client, client => client.orders, {onDelete: 'CASCADE', onUpdate: 'CASCADE' })
     client: Client
 
     @Column({type: 'float4'})
