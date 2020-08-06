@@ -10,6 +10,9 @@ export class Client {
     @Column({length: 65})
     name: string
 
+    @Column()
+    address: string
+
     @Column({length: 13})
     phoneContact: string
     
